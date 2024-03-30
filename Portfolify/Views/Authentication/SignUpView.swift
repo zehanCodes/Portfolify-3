@@ -74,7 +74,8 @@ struct CustomTextField: View {
         HStack() {
             Image(systemName: imageName)
                 .padding(.leading)
-            TextField(text, text: $fieldTxt)
+            TextField(text, text: $fieldTxt, axis: .vertical)
+                .lineLimit(5)
                 .padding(.vertical)
         }
         .cornerRadius(12)

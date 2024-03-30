@@ -32,7 +32,7 @@ struct ContentView: View {
                         }
                         .padding()
                         .background {
-                            Color.blue
+                            Color.primaryBrand
                         }
                         .cornerRadius(12)
                     }

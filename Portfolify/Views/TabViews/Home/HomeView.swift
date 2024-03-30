@@ -9,31 +9,33 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        TabView {
-            
-            MainView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "house")
-                        Text("Home")
+        NavigationStack {
+            TabView {
+                
+                MainView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "house")
+                            Text("Home")
+                        }
                     }
-                }
-            
-            AddInfoView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "pencil.and.list.clipboard")
-                        Text("Add Info")
+                
+                AddCategoryInfoView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "pencil.and.list.clipboard")
+                            Text("Add Info")
+                        }
                     }
-                }
-            
-            PorfolioView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "doc")
-                        Text("Portfolio")
+                
+                PorfolioView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "doc")
+                            Text("Portfolio")
+                        }
                     }
-                }
+            }
         }
     }
 }
