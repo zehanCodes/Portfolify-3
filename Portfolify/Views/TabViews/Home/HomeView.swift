@@ -37,6 +37,16 @@ struct HomeView: View {
                     }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: ContentView()) {
+                    Label("Logout", systemImage: "rectangle.portrait.and.arrow.right")
+                        .labelStyle(.iconOnly)
+                        .fontWeight(.semibold)
+                }
+            }
+        }
     }
 }
 
@@ -44,47 +54,53 @@ struct HomeView: View {
 // MARK: -
 
 struct MainView: View {
+    @EnvironmentObject var signUpVM: SignUpViewModel
+    
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 20) {
-                NavigationLink {
-                    Terms_ConditionsView()
-                } label: {
-                    Text("Terms & Conditions")
-                        .padding(10)
-                        .background {
-                            Color.blue
-                        }
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
-                }
-                
-                
-                NavigationLink {
-                    ContactUs()
-                } label: {
-                    Text("Contact Us / Report")
-                        .padding(10)
-                        .background {
-                            Color.blue
-                        }
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
-                }
-                
-                NavigationLink {
-                    ProfileView()
-                } label: {
-                    Text("Account Info")
-                        .padding(10)
-                        .background {
-                            Color.blue
-                        }
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
-                }
+        //        NavigationStack {
+        VStack(spacing: 20) {
+            NavigationLink {
+                Terms_ConditionsView()
+            } label: {
+                Text("Terms & Conditions")
+                    .padding(10)
+                    .background {
+                        Color.blue
+                    }
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+            }
+            
+            
+            NavigationLink {
+                ContactUs()
+            } label: {
+                Text("Contact Us / Report")
+                    .padding(10)
+                    .background {
+                        Color.blue
+                    }
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+            }
+            
+            NavigationLink {
+                ProfileView()
+                    .environmentObject(signUpVM)
+            } label: {
+                Text("Account Info")
+                    .padding(10)
+                    .background {
+                        Color.blue
+                    }
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
             }
         }
+        .onAppear {
+            print(signUpVM.signUpDataObj.email)
+        }
+        //        }
     }
 }
 #Preview {

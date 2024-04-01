@@ -8,58 +8,80 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State var name: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
-
+    
+    @StateObject var signUpVM = SignUpViewModel()
+    @State private var navigateToNextScreen = false
+    @State private var showingAlert: Bool = false
+    @State private var temp: String = ""
+    
     var body: some View {
         VStack {
-            Text("Sign Up")
-                .bold()
-                .font(.largeTitle)
-                .fontDesign(.monospaced)
-
-            Spacer()
-            
-            CustomTextField(fieldTxt: $name, imageName: "person", text: "UserName")
-            CustomTextField(fieldTxt: $name, imageName: "envelope", text: "Email")
-            CustomTextField(fieldTxt: $name, imageName: "lock", text: "Password")
-            
-            Spacer()
-
-            NavigationLink {
-                HomeView()
-                    .navigationBarBackButtonHidden(true)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            NavigationLink {
-                                ContentView()
-                            } label: {
-                                Label("logout", systemImage: "rectangle.portrait.and.arrow.right")
-                                    .labelStyle(.iconOnly)
-                                    .fontWeight(.semibold)
-                            }
-                        }
-                    }
-            } label: {
+            ScrollView {
                 Text("Sign Up")
-                    .padding(15)
-                    .foregroundColor(.white)
-                    .font(.title3)
-                    .background {
-                        Color(.black)
+                    .bold()
+                    .font(.largeTitle)
+                    .fontDesign(.monospaced)
+                
+                Spacer()
+                
+                Group {
+                    CustomTextField(fieldTxt: $signUpVM.signUpDataObj.name, imageName: "person", text: "User Name")
+                    CustomTextField(fieldTxt: $signUpVM.signUpDataObj.email, imageName: "envelope", text: "Email")
+                        .keyboardType(.emailAddress)
+                    
+                    HStack() {
+                        Image(systemName: "lock")
+                            .padding(.leading)
+                        SecureField("Password", text: $signUpVM.signUpDataObj.password)
+                            .lineLimit(5)
+                            .padding(.vertical)
                     }
                     .cornerRadius(12)
-                    .overlay {
+                    .overlay(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color(.label), lineWidth: 1)
+                    )
+                    .padding(10)
+                    
+                    CustomTextField(fieldTxt: $signUpVM.signUpDataObj.highSchool, imageName: "building.columns", text: "High School")
+                    CustomTextField(fieldTxt: $signUpVM.signUpDataObj.cgpa, imageName: "number", text: "CGPA")
+                    CustomTextField(fieldTxt: $signUpVM.signUpDataObj.graduationYear, imageName: "graduationcap.fill", text: "Graduation Year")
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    if !signUpVM.isUserFound() {
+                        signUpVM.saveData()
+                        navigateToNextScreen = true
+                    } else {
+                        showingAlert = true
                     }
+                }) {
+                    Text("Sign Up")
+                        .padding(15)
+                        .foregroundColor(Color.txt)
+                        .font(.title3)
+                        .background {
+                            Color(.label)
+                        }
+                        .cornerRadius(12)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color.bdr, lineWidth: 1)
+                        }
+                }
+                .disabled(!signUpVM.validateSignUp())
+                .opacity(signUpVM.validateSignUp() ? 1 : 0.5)
+                .navigationDestination(isPresented: $navigateToNextScreen) {
+                    HomeView()
+                        .environmentObject(signUpVM)
+                }
+                Spacer()
             }
-
-            Spacer()
         }
-        .background {
-//            Color.orange
+        .alert("User Already Registered!", isPresented: $showingAlert) {
+            Button("OK", role: .cancel) { }
         }
     }
 }

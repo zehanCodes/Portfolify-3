@@ -46,8 +46,10 @@ struct AddInfoSheetView: View {
     
     @StateObject var data = AddInfoSubModel()
     @ObservedObject var item: AddCategoryDetailsModel
+    
     @Environment(\.presentationMode) var presentationMode
-
+    @EnvironmentObject var accountVM: AddInfoViewModel
+    
     var body: some View {
         VStack {
             VStack {
@@ -65,6 +67,7 @@ struct AddInfoSheetView: View {
                 Button {
                     item.data.append(data)
                     presentationMode.wrappedValue.dismiss()
+                    accountVM.saveData()
                 } label: {
                     Text("Done")
                 }

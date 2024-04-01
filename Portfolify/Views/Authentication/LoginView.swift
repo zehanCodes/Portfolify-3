@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var name: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
-
+    
+    @StateObject var signInVM = SignUpViewModel()
+    
+    @State private var navigateToNextScreen = false
+    @State var showingAlert: Bool = false
+    
     var body: some View {
         VStack {
             Text("Login")
@@ -20,45 +22,57 @@ struct LoginView: View {
                 .fontDesign(.monospaced)
 
             Spacer()
-
-            CustomTextField(fieldTxt: $name, imageName: "envelope", text: "Email")
-            CustomTextField(fieldTxt: $name, imageName: "lock", text: "Password")
-                .padding(.bottom)
-
-            NavigationLink {
-                HomeView()
-                .navigationBarBackButtonHidden(true)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink {
-                            ContentView()
-                        } label: {
-                            Label("logout", systemImage: "rectangle.portrait.and.arrow.right")
-                                .labelStyle(.iconOnly)
-                                .fontWeight(.semibold)
-                        }
-                    }
+            
+            Group {
+                CustomTextField(fieldTxt: $signInVM.signUpDataObj.email, imageName: "envelope", text: "Email")
+                HStack() {
+                    Image(systemName: "lock")
+                        .padding(.leading)
+                    SecureField("Password", text: $signInVM.signUpDataObj.password)
+                        .lineLimit(5)
+                        .padding(.vertical)
                 }
-            } label: {
+                .cornerRadius(12)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color(.label), lineWidth: 1)
+                )
+                .padding(10)
+            }
+            
+            Button(action: {
+                if validateSignIn() {
+                    navigateToNextScreen = true
+                } else {
+                    showingAlert = true
+                }
+            }) {
                 Text("Login")
                     .padding(15)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color.txt)
                     .font(.title3)
                     .background {
-                        Color.black
+                        Color(.label)
                     }
                     .cornerRadius(12)
                     .overlay {
                         RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color(.label), lineWidth: 1)
+                            .stroke(Color.bdr, lineWidth: 1)
                     }
             }
-            
+            .navigationDestination(isPresented: $navigateToNextScreen) {
+                HomeView()
+                    .environmentObject(signInVM)
+            }
             Spacer()
         }
-        .background {
-//            Color.orange
+        .alert("User not found or Password Incorrect", isPresented: $showingAlert) {
+            Button("OK", role: .cancel) { }
         }
+    }
+    
+    func validateSignIn() -> Bool {
+        return signInVM.authenticateUserAndLoadData() ? true : false
     }
 }
 

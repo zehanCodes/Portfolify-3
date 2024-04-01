@@ -10,8 +10,14 @@ import PhotosUI
 
 struct ProfileView: View {
     
-    @StateObject var vm = PhotoSelectorViewModel()
     let maxPhotosToSelect = 1
+    
+    @StateObject var vm = PhotoSelectorViewModel()
+    @EnvironmentObject var signUpVM: SignUpViewModel
+    @Environment(\.presentationMode) var presentationMode
+
+    @State var temp = ""
+    @State var dp: UIImage = UIImage(systemName: "person")!
     
     var body: some View {
         VStack {
@@ -31,7 +37,7 @@ struct ProfileView: View {
                                 .resizable()
                                 .frame(width: 60, height: 60)
                         } else {
-                            Image(uiImage: vm.images[0])
+                            Image(uiImage: dp)
                                 .resizable()
 //                                .frame(width: 60, height: 60)
                                 .clipShape(Circle())
@@ -62,17 +68,96 @@ struct ProfileView: View {
                             }
                     }
             }
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam magna diam, ornare eget iaculis id, sagittis ut lectus. Donec sit amet mauris ac ligula elementum interdum. Ut id turpis vel ex viverra mattis. Vestibulum a elit imperdiet tellus tempus auctor ut id mauris.Nam magna diam, ornare eget iaculis id, sagittis ut lectus. Donec sit amet mauris ac ligula elementum interdum. Ut id turpis vel ex viverra mattis. Vestibulum a elit imperdiet tellus tempus auctor ut id mauris. Integer nisi sapien, elementum eu metus et, dictum finibus odio. Interdum Donec finibus nisi eu dui condimentum luctus.")
-                .multilineTextAlignment(.center)
-                .font(.callout)
-                .padding(.vertical)
+            
+            Spacer()
+            
+            VStack(alignment: .center) {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Name: ")
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                            .padding(.leading)
+                            .padding(.bottom, -10)
+                        CustomTextField(fieldTxt: $signUpVM.signUpDataObj.name, imageName: "person", text: "Enter Name")
+                    }
+                }
+                
+                VStack(alignment: .leading) {
+                    Text("High School: ")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                        .padding(.leading)
+                        .padding(.bottom, -10)
+                    CustomTextField(fieldTxt: $signUpVM.signUpDataObj.highSchool, imageName: "building.columns", text: "Enter High School")
+                }
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("CGPA ")
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                            .padding(.leading)
+                            .padding(.bottom, -10)
+                        
+                        CustomTextField(fieldTxt: $signUpVM.signUpDataObj.cgpa, imageName: "number", text: "Enter CGPA")
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Graduation Year: ")
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                            .padding(.leading)
+                            .padding(.bottom, -10)
+                        CustomTextField(fieldTxt: $signUpVM.signUpDataObj.graduationYear, imageName: "graduationcap.fill", text: "Enter Graduation Year")
+                    }
+                }
+            }
+            
+            Spacer()
+            
+            Button {
+                signUpVM.saveData()
+                presentationMode.wrappedValue.dismiss()
+                
+            } label: {
+                Text("Save")
+                    .padding(15)
+                    .foregroundColor(Color.txt)
+                    .font(.title3)
+                    .background {
+                        Color(.label)
+                    }
+                    .cornerRadius(12)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color.bdr, lineWidth: 1)
+                    }
+            }
             
             Spacer()
         }
         .padding()
         .onChange(of: vm.selectedPhotos) { _, _ in
             vm.convertDataToImage()
+            
         }
+        .onChange(of: vm.images) { _, _ in
+            if !vm.images.isEmpty {
+                setImageData(image: vm.images[0])
+                dp = vm.images[0]
+            }
+        }
+        .onAppear {
+            if let data = signUpVM.signUpDataObj.imageData {
+                dp = UIImage(data: data)!
+                vm.images.append(dp)
+            }
+        }
+    }
+    
+    func setImageData(image: UIImage) {
+        signUpVM.signUpDataObj.imageData = image.jpegData(compressionQuality: 1.0)
     }
 }
 

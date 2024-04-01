@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-final class AddInfoViewModel: ObservableObject {
+final class AddInfoViewModel: ObservableObject, Codable {
     
     @Published var infoItems = CategoryDataModel()
+    
+    init () {
+        
+    }
     
     func getDataForCategory(_ category: Categories) -> AddCategoryDetailsModel {
         switch category {
@@ -44,8 +48,39 @@ final class AddInfoViewModel: ObservableObject {
             self.infoItems.workExperience.categoryTitle = category.rawValue
         }
     }
+    
+    enum CodingKeys: String, CodingKey {
+            case infoItems
+        }
+
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(infoItems, forKey: .infoItems)
+        }
+
+        required init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            infoItems = try container.decode(CategoryDataModel.self, forKey: .infoItems)
+        }
 }
 
+extension AddInfoViewModel {
+    func saveData() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(self) {
+            UserDefaults.standard.set(encoded, forKey: "addInfoViewModel")
+        }
+    }
+    
+    func loadData() {
+        if let savedData = UserDefaults.standard.data(forKey: "addInfoViewModel") {
+            let decoder = JSONDecoder()
+            if let loadedData = try? decoder.decode(AddInfoViewModel.self, from: savedData) {
+                self.infoItems = loadedData.infoItems
+            }
+        }
+    }
+}
 
 enum Categories: String, CaseIterable {
     case classes = "Classes"

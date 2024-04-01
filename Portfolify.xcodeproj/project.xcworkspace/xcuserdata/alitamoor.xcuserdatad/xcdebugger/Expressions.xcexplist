@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #4 in ProfileView.body.getter:ProfileView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #3 in ProfileView.body.getter:ProfileView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

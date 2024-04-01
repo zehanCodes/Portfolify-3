@@ -19,6 +19,8 @@ struct AddCategoryInfoView: View {
                 ForEach(Categories.allCases, id: \.self) { item in
                     NavigationLink {
                         CategoryDetailsListView(infoItem: accountVM.getDataForCategory(item))
+                            .environmentObject(accountVM)
+                        
                     } label: {
                         Text("\(item.rawValue)")
                             .frame(width: UIScreen.main.bounds.size.width/2.3 , height: 160)
@@ -37,6 +39,9 @@ struct AddCategoryInfoView: View {
                 for item in Categories.allCases {
                     accountVM.setTitle(item)
                 }
+            }
+            .onAppear {
+                accountVM.loadData()
             }
         }
     }
