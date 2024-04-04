@@ -66,68 +66,36 @@
             endingLineNumber = "69"
             landmarkName = "saveData()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BC6D7478-2217-4D82-B00B-0116D3B05F64"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Portfolify/ViewModels/AddInfoViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "loadData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "00EB8D57-F5D5-4B2C-9849-686E40CB7463"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Portfolify/Views/TabViews/Home/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "body"
-            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "00EB8D57-F5D5-4B2C-9849-686E40CB7463 - 739849022cc10b45"
+                  uuid = "E023BC53-55B6-4932-8C4A-9BBF54456180 - 3bfc1173590d8438"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Portfolify.MainView.body.getter : some"
+                  symbolName = "Portfolify.AddInfoViewModel.saveData() -&gt; ()"
                   moduleName = "Portfolify"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Home/HomeView.swift"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/ViewModels/AddInfoViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "248">
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "00EB8D57-F5D5-4B2C-9849-686E40CB7463 - 739849022cc10b45"
+                  uuid = "E023BC53-55B6-4932-8C4A-9BBF54456180 - 3bfc1173590d8459"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Portfolify.MainView.body.getter : some"
+                  symbolName = "Portfolify.AddInfoViewModel.saveData() -&gt; ()"
                   moduleName = "Portfolify"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Home/HomeView.swift"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/ViewModels/AddInfoViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "96">
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "60">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -136,32 +104,48 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6A0E214B-150F-4F13-8D2B-662AD4B24D0C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Portfolify/Views/TabViews/Home/ProfileView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "setImageData(image:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7DBE4234-80CD-4BF8-B0C7-6E1B88BEC880"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Portfolify/Views/TabViews/Home/ProfileView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "body"
-            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6A0E214B-150F-4F13-8D2B-662AD4B24D0C - ab73aad671b46c48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.ProfileView.setImageData(image: __C.UIImage) -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Home/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "6A0E214B-150F-4F13-8D2B-662AD4B24D0C - ab73aad671b46c86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.ProfileView.setImageData(image: __C.UIImage) -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Home/ProfileView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "83FE4522-A39B-4F87-AF90-430CDB50D7B2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Portfolify/Views/TabViews/Home/PhotoSelectorView.swift"
@@ -231,17 +215,318 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "685B6E52-4A44-4199-BA2E-7CD59B432B56"
+            uuid = "47EA2F98-E237-4385-88D3-EF38BB925CFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/Views/TabViews/Portfolio/PorfolioView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E4C2E2F-4E1F-4F8D-B1EA-45D90F804A4F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "exportToPDF(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8E4C2E2F-4E1F-4F8D-B1EA-45D90F804A4F - c9cf194c13eb0df0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.PortfolioView.exportToPDF() -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  uuid = "8E4C2E2F-4E1F-4F8D-B1EA-45D90F804A4F - c9cf194c13eb0df0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.PortfolioView.exportToPDF() -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "976">
+               </Location>
+               <Location
+                  uuid = "8E4C2E2F-4E1F-4F8D-B1EA-45D90F804A4F - c9cf194c13eb0df0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.PortfolioView.exportToPDF() -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "980">
+               </Location>
+               <Location
+                  uuid = "8E4C2E2F-4E1F-4F8D-B1EA-45D90F804A4F - c9cf194c13eb0d91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.PortfolioView.exportToPDF() -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "976">
+               </Location>
+               <Location
+                  uuid = "8E4C2E2F-4E1F-4F8D-B1EA-45D90F804A4F - c9cf194c13eb0d91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.PortfolioView.exportToPDF() -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "980">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD7270E8-9B2D-4474-9CBD-00DBA4D916DB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Portfolify/Views/TabViews/Home/ProfileView.swift"
+            filePath = "Portfolify/ViewModels/SignUpViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "authenticateUserAndLoadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D192C7C-CB76-4F49-8C67-BD89B84EFE14"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/ViewModels/SignUpViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "saveData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5562F570-E623-4A70-ACB0-0EF7824B1402"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/Views/TabViews/Portfolio/LeftSideViewPorfolio.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5562F570-E623-4A70-ACB0-0EF7824B1402 - 133a7ca69f8b9158"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in Portfolify.LeftSideViewPorfolio.body.getter : some"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/LeftSideViewPorfolio.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "5562F570-E623-4A70-ACB0-0EF7824B1402 - 133a7ca69f8b9158"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in Portfolify.LeftSideViewPorfolio.body.getter : some"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/LeftSideViewPorfolio.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "348">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD860E80-F886-4E85-B556-1C89758A4EE7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/ViewModels/SignUpViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41F36EC2-5D38-4143-9AB9-23F9D2D92CC4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "41F36EC2-5D38-4143-9AB9-23F9D2D92CC4 - bed98599e292e6ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (CoreGraphics.CGFloat) -&gt; () in Portfolify.PortfolioMain.body.getter : some"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "41F36EC2-5D38-4143-9AB9-23F9D2D92CC4 - bed98599e292e68d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (CoreGraphics.CGFloat) -&gt; () in Portfolify.PortfolioMain.body.getter : some"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEDEB193-DF70-45B1-9293-2FD4CA2BBCB7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/Views/TabViews/Portfolio/PortfolioView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2C0B964-90BF-486D-9A8D-67B0ED733E77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Portfolify/ViewModels/AddInfoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2C0B964-90BF-486D-9A8D-67B0ED733E77 - d80dc67b14bc5132"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.AddInfoViewModel.loadData() -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/ViewModels/AddInfoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "B2C0B964-90BF-486D-9A8D-67B0ED733E77 - d80dc67b14bc5115"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolify.AddInfoViewModel.loadData() -&gt; ()"
+                  moduleName = "Portfolify"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alitamoor/My%20Files/Coding%20Projects/Fiverr/Portfolify/Portfolify/ViewModels/AddInfoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

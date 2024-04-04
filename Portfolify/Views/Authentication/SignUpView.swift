@@ -13,6 +13,7 @@ struct SignUpView: View {
     @State private var navigateToNextScreen = false
     @State private var showingAlert: Bool = false
     @State private var temp: String = ""
+    @State private var showSuccess: Bool = false
     
     var body: some View {
         VStack {
@@ -53,7 +54,8 @@ struct SignUpView: View {
                 Button(action: {
                     if !signUpVM.isUserFound() {
                         signUpVM.saveData()
-                        navigateToNextScreen = true
+//                        navigateToNextScreen = true
+                        showSuccess = true
                     } else {
                         showingAlert = true
                     }
@@ -81,6 +83,10 @@ struct SignUpView: View {
             }
         }
         .alert("User Already Registered!", isPresented: $showingAlert) {
+            Button("OK", role: .cancel) { }
+        }
+        
+        .alert("SignUp Successful!", isPresented: $showSuccess) {
             Button("OK", role: .cancel) { }
         }
     }

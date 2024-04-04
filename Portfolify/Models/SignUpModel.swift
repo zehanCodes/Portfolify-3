@@ -12,11 +12,12 @@ import SwiftUI
 class SignUpModel: Identifiable, ObservableObject, Codable {
     @Published var id: Int = UUID().hashValue
     @Published var name: String = ""
-    @Published var email: String = ""
-    @Published var password: String = ""
+    @Published var email: String = "John@gmail.com"
+    @Published var password: String = "123"
     @Published var highSchool: String = ""
     @Published var cgpa: String = ""
     @Published var graduationYear: String = ""
+    @Published var about: String = ""
     @Published var imageData: Data? // Optional image data property
     
     init() {}
@@ -30,6 +31,7 @@ class SignUpModel: Identifiable, ObservableObject, Codable {
         case cgpa = "cgpa"
         case graduationYear = "graduationYear"
         case imageData = "imageData" // Include image data in CodingKeys
+        case about = "about"
     }
 
     required init(from decoder: Decoder) throws {
@@ -41,6 +43,7 @@ class SignUpModel: Identifiable, ObservableObject, Codable {
         highSchool = try values.decode(String.self, forKey: .highSchool)
         cgpa = try values.decode(String.self, forKey: .cgpa)
         graduationYear = try values.decode(String.self, forKey: .graduationYear)
+        about = try values.decode(String.self, forKey: .about)
         imageData = try values.decodeIfPresent(Data.self, forKey: .imageData) // Decode image data if present
     }
     
@@ -53,6 +56,7 @@ class SignUpModel: Identifiable, ObservableObject, Codable {
         try container.encode(highSchool, forKey: .highSchool)
         try container.encode(cgpa, forKey: .cgpa)
         try container.encode(graduationYear, forKey: .graduationYear)
+        try container.encode(about, forKey: .about)
         try container.encodeIfPresent(imageData, forKey: .imageData) // Encode image data if present
     }
 }

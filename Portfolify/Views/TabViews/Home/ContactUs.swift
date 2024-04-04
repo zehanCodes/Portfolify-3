@@ -23,12 +23,12 @@ struct ContactUs: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text("Email: ")
-                    Text("dummy@gmail.com")
+                    Text("zehanli2025@gmail.com")
                 }
                 
                 HStack {
                     Text("Phone # : ")
-                    Text("0172229021")
+                    Text("484-477-6726")
                 }
             }
             

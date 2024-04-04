@@ -14,36 +14,41 @@ struct AddCategoryInfoView: View {
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
-        VStack {
-            LazyVGrid(columns: columns, alignment: .center, spacing: 20, content: {
-                ForEach(Categories.allCases, id: \.self) { item in
-                    NavigationLink {
-                        CategoryDetailsListView(infoItem: accountVM.getDataForCategory(item))
-                            .environmentObject(accountVM)
-                        
-                    } label: {
-                        Text("\(item.rawValue)")
-                            .frame(width: UIScreen.main.bounds.size.width/2.3 , height: 160)
-                            .background {
-                                Color.primaryBrand
-                            }
-                            .font(.title3)
-                            .foregroundColor(.white)
-                            .fontWeight(.medium)
-                            .cornerRadius(20)
+//        ScrollView {
+            VStack {
+                LazyVGrid(columns: columns, alignment: .center, spacing: 20, content: {
+                    ForEach(Categories.allCases, id: \.self) { item in
+                        NavigationLink {
+                            CategoryDetailsListView(infoItem: accountVM.getDataForCategory(item))
+                                .environmentObject(accountVM)
+                            
+                        } label: {
+                            Text("\(item.rawValue)")
+                                .frame(width: UIScreen.main.bounds.size.width/2.3 , height: 160)
+                                .background {
+                                    Color.primaryBrand
+                                }
+                                .font(.title3)
+                                .foregroundColor(.white)
+                                .fontWeight(.medium)
+                                .cornerRadius(20)
+                        }
+                    }
+                })
+                .padding(.horizontal, 15)
+                .task {
+                    for item in Categories.allCases {
+                        accountVM.setTitle(item)
                     }
                 }
-            })
-            .padding(.horizontal, 15)
-            .task {
-                for item in Categories.allCases {
-                    accountVM.setTitle(item)
+                .onAppear {
+                    accountVM.loadData()
                 }
             }
-            .onAppear {
-                accountVM.loadData()
-            }
-        }
+            .navigationTitle("Add Categories Data")
+            .navigationBarTitleDisplayMode(.inline)
+
+//        }
     }
 }
 

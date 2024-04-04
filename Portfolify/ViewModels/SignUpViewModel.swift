@@ -37,6 +37,7 @@ extension SignUpViewModel {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self) {
             UserDefaults.standard.set(encoded, forKey: "\(signUpDataObj.email)")
+            Utilities.shared.setLoggedInUserEmail(email: signUpDataObj.email)
         }
     }
     
@@ -53,7 +54,7 @@ extension SignUpViewModel {
     func isUserFound() -> Bool{
         if let savedData = UserDefaults.standard.data(forKey: "\(signUpDataObj.email)") {
             let decoder = JSONDecoder()
-            if let loadedData = try? decoder.decode(SignUpViewModel.self, from: savedData) {
+            if let _ = try? decoder.decode(SignUpViewModel.self, from: savedData) {
                 return true
             }
         }

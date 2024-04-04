@@ -68,12 +68,12 @@ extension AddInfoViewModel {
     func saveData() {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self) {
-            UserDefaults.standard.set(encoded, forKey: "addInfoViewModel")
+            UserDefaults.standard.set(encoded, forKey: "\(Utilities.shared.getLoggedInUserEmail())AddInfo")
         }
     }
     
     func loadData() {
-        if let savedData = UserDefaults.standard.data(forKey: "addInfoViewModel") {
+        if let savedData = UserDefaults.standard.data(forKey: "\(Utilities.shared.getLoggedInUserEmail())AddInfo") {
             let decoder = JSONDecoder()
             if let loadedData = try? decoder.decode(AddInfoViewModel.self, from: savedData) {
                 self.infoItems = loadedData.infoItems
