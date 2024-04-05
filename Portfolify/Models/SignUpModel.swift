@@ -12,8 +12,8 @@ import SwiftUI
 class SignUpModel: Identifiable, ObservableObject, Codable {
     @Published var id: Int = UUID().hashValue
     @Published var name: String = ""
-    @Published var email: String = "John@gmail.com"
-    @Published var password: String = "123"
+    @Published var email: String = ""
+    @Published var password: String = ""
     @Published var highSchool: String = ""
     @Published var cgpa: String = ""
     @Published var graduationYear: String = ""

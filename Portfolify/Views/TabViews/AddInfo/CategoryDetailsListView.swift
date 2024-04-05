@@ -11,6 +11,7 @@ struct CategoryDetailsListView: View {
     
     @State var isPresented = false
     @ObservedObject var infoItem: AddCategoryDetailsModel
+    @EnvironmentObject var accountVM: AddInfoViewModel
     
     var body: some View {
         ZStack {
@@ -22,6 +23,7 @@ struct CategoryDetailsListView: View {
                 }
                 .onDelete(perform: { indexSet in
                     infoItem.data.remove(atOffsets: indexSet)
+                    accountVM.saveData()
                 })
             }
             
