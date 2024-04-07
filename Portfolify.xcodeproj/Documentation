@@ -1,17 +1,68 @@
+Documentation
 
-<img width="384" alt="Screenshot 2024-04-07 at 12 35 50 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/bdf2dea6-6949-4307-900b-46764b3dd0dd">
-<img width="382" alt="Screenshot 2024-04-07 at 12 35 59 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/84c414ac-b3b9-4937-8a11-f53e61e82355">
-<img width="387" alt="Screenshot 2024-04-07 at 12 36 12 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/073596f1-43bd-48ce-acba-141541b0e91c">
-<img width="379" alt="Screenshot 2024-04-07 at 12 36 22 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/9802480b-95d7-4b1b-bdef-bb9b829c7f0d">
-<img width="384" alt="Screenshot 2024-04-07 at 12 36 30 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/20bb3320-344f-4cb0-9a3c-5690eaa2cb6d">
-<img width="383" alt="Screenshot 2024-04-07 at 12 36 45 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/bd1d3141-b26d-44f9-bf5d-68991cf687ca">
-<img width="378" alt="Screenshot 2024-04-07 at 12 36 55 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/0db9e742-db4f-41d7-9045-fdcd3988af13">
-<img width="382" alt="Screenshot 2024-04-07 at 12 37 03 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/d73f2c17-1d73-4109-a594-cee402c6bb41">
-<img width="383" alt="Screenshot 2024-04-07 at 12 38 57 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/d9e0a612-1695-4209-9c97-83257ed102f6">
-<img width="386" alt="Screenshot 2024-04-07 at 12 39 07 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/9ca10327-b71b-42f6-9b6e-52a650955049">
-<img width="381" alt="Screenshot 2024-04-07 at 12 39 25 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/ab1bc0c1-f26d-4d34-abb5-1bf42795b14a">
-<img width="380" alt="Screenshot 2024-04-07 at 12 39 32 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/541c23b4-e5df-4e0c-8e99-603469ca5aeb">
-<img width="394" alt="Screenshot 2024-04-07 at 12 35 35 AM" src="https://github.com/zehanCodes/Portfolify-3/assets/108188575/2a164155-dd22-4e56-b20d-25c87e47a638">
+Launch Screen
+https://drive.google.com/file/d/1wrUYKh4zAcFpuwXI72f_hO72Avzd-Mjj/view?usp=sharing 
+
+Upon launching the app, new users can register by hitting the signup button providing necessary information, while returning users can simply log in by hitting the login button. All user data is securely stored with core data, and the backend verifies login credentials to ensure a secure authentication process.
 
 
-![hello](https://github.com/zehanCodes/Portfolify-3/assets/108188575/bdf2dea6-6949-4307-900b-46764b3dd0dd)
+Login Screen
+https://drive.google.com/file/d/1n7HD339n-q2JaUlwlXD8vhs1jO-sSlXA/view?usp=sharing 
+
+Upon clicking the login button on the launch screen, the user will be prompted to enter their email and password. There is a textbox for each input. Clicking the login button at the bottom will take to user to the home screen of the app. The view model will take in the input and confirm with the model if the entered login information is correct.
+
+Signup Screen
+https://drive.google.com/file/d/1eKYgrLdDjIQyNFVGqQK5KPuh26EhJdAD/view?usp=sharing 
+
+Upon clicking the signup button in the launch screen, the user will be prompted with the necessary information to make their account. This includes, username, email, password, high school, cumulative GPA, and their year of graduation from high school. There is a textbox for each input. Once each textbox is filled in, clicking the signup button at the bottom will take the user to the home page of the app and store their new account in the core data.
+
+Home Screen
+https://drive.google.com/file/d/1MOJClOAA-kjlKEHVIcncf4ON_JH_1Txu/view?usp=sharing 
+
+The home screen is the screen the user will be taken to after they login or sign up. There are four buttons on this screen: the log out button, terms and conditions, bug reporting, and account information. Clicking the logout icon on the top right of the screen will take the user back to the launch screen, with their account login information safely stored in the core data. The other three buttons will take the user to the respective screen.
+
+Terms and Conditions Screen
+https://drive.google.com/file/d/1V5mL0F-LkxHf2eicFtWWip6nulEH4Nes/view?usp=sharing 
+
+This screen has the terms and conditions for the users to understand when using the app. Holding down the mouse button and dragging will allow the user to drag down to see all ten terms and conditions. Once the user finishes reading them, they can click the back button on the top left of their screen, which will take them back to the home screen.
+
+Bug Reporting Screen
+https://drive.google.com/file/d/144Vn8YJWbbkBhqIf7DyPHpODf7xSX1-3/view?usp=sharing 
+
+Clicking the middle button labeled “Contacting Us/Report” brings the user to the bug reporting screen. Here, the user is given our email and phone number so they can contact us and report on any bug or issues they are experiencing. Afterwards, they can click the back button on the top left of their screen, which will take them back to the home screen.
+
+Account Information Screen
+https://drive.google.com/file/d/1netzdbbSBCZlLWdt9jq-P5-1Mok_Ss6B/view?usp=sharing 
+
+Clicking the button labeled “Account Info” brings the user to the account information screen. At the top of this screen is the user’s profile picture. If the user wishes to change their profile picture, they can click on the purple circle with the edit icon, which will take the user to their gallery, where they can export any image they want. Below is the user’s name, high school, GPA, and year of graduation, all of which they filled out already when first signing up. The textbox at the bottom is where the user can type their biography, where they can talk a bit more about themselves and express themselves. All of this information will be shown in the user’s portfolio. Once satisfied, the user can click the save button at the bottom of the screen, which will store the inputted data in the core data and bring the user back to the home screen.
+
+Add Information Dashboard
+https://drive.google.com/file/d/1ZwbDQ7WdMTCGzyGDU4Vm3kiTil43wcmA/view?usp=sharing 
+
+
+
+
+
+At the bottom of the home screen is a navigation bar with three icons. Clicking the icon labeled “add info” will take the user to the add information dashboard. It is here where the user enters the rest of the information they would like to put in their high school portfolio. There are six options given: classes, honors/awards, work experience, volunteer work, extracurriculars, and test scores. There is a button for each of these choices. Clicking on one of them will take the user to the respective screen. 
+
+https://drive.google.com/file/d/1ZTPhWnckXtpDqHhnsNgXu0NRe-ZkrRVp/view?usp=sharing 
+https://drive.google.com/file/d/1WAme-uv4DKIdl_he_0au1cC2Ap3ONxte/view?usp=sharing  
+All six screens have an add button on the top right of the screen, which when clicked, will show textboxes on the screen that the user will need to fill in. The textboxes are labeled according to what information the user wants to add.
+
+
+https://drive.google.com/file/d/1z0xr16UpFaAR-jTmcIMSKKe1d4HUIjTr/view?usp=sharing 
+Once the user finishes adding their desired information, they can click done, which will store the inputted data in the core data and show the activity added on the screen. Clicking on the activity will take the user to the same textboxes, which will show what they last inputted. It is here that the user can change their inputs in the textboxes if they want to. 
+
+https://drive.google.com/file/d/1fHsWuwq5d3d7bbsAc6sz473iZQNxZwdP/view?usp=sharing 
+If the user wishes to delete an item in their list, they can swipe left on the item. Then, a delete button prompt will show in which the user can tap to delete. At the top left of all six screens is a back button, which will take the user back to the add information dashboard.
+
+Portfolio Screen
+https://drive.google.com/file/d/1HFbuKMLD9YyhNkY5X9IkdkAAOLlg1BOd/view?usp=sharing 
+https://drive.google.com/file/d/1RusRBPX4NAtbjuzvq53vbzIFvvKZ_e23/view?usp=sharing 
+
+The third icon on the navigation bar is the portfolio icon, which when clicked will bring the user to the portfolio screen. It is here that the user can see their whole portfolio with all the information entered in. Drag to scroll, if needed. On the top right of the screen, there is a download icon that will download the portfolio as a pdf. From here, the user has the choice of copying it, marking it up, printing it, adding tags, or saving it to their files. From here, the user can do whatever they want, such as sharing their portfolio to social media for everyone to see.
+
+
+
+
+
